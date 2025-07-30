@@ -1,0 +1,14 @@
+# config/sidekiq.yml
+:concurrency: 5
+:queues:
+  - default
+  - critical
+:timeout: 30
+:pidfile: ./tmp/pids/sidekiq.pid
+
+production:
+  :concurrency: 10
+staging:
+  :concurrency: 5
+development:
+  :concurrency: 2

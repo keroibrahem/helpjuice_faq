@@ -1,0 +1,18 @@
+<div class="search-container">
+  <div class="search-box">
+    <h1>Article Search Analytics</h1>
+    <input type="text" class="search-input" id="searchInput" placeholder="Search articles..." autocomplete="off">
+    <span id="initialMessage" class="initial-message">Type any character to load search analytics</span>
+    <div id="loadingIndicator" class="loading-indicator"></div>
+  </div>
+
+  <div class="analytics-section">
+    <div class="analytics-header">
+      <h2>Your Search Trends</h2>
+      <button id="refreshBtn" class="refresh-btn">Refresh</button>
+    </div>
+    <div id="analyticsData"></div>
+  </div>
+</div>
+
+<%= javascript_include_tag 'search' %>
