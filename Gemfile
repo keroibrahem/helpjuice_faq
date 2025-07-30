@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Core Rails
-gem 'rails', '~> 7.0.8'
+gem 'rails', '~> 7.2.2'
 gem "propshaft"
 
 # Database
