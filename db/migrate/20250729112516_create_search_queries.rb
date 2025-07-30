@@ -1,4 +1,4 @@
-class CreateSearchQueries < ActiveRecord::Migration[8.0]
+class CreateSearchQueries < ActiveRecord::Migration[7.0]
   def change
     create_table :search_queries do |t|
       t.string :query
