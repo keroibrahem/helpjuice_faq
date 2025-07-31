@@ -352,6 +352,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  activesupport (= 7.0.8.7)
   bootsnap (~> 1.16)
   brakeman
   capybara
@@ -359,6 +360,7 @@ DEPENDENCIES
   hiredis (~> 0.6)
   jbuilder
   kamal
+  logger
   pg (~> 1.1)
   propshaft
   puma (~> 6.0)
