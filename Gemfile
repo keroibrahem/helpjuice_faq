@@ -13,6 +13,9 @@ gem "redis", "~> 5.0"
 gem "hiredis", "~> 0.6"
 gem "redis-rails"
 
+gem 'activesupport', '7.0.8.7'  
+gem 'logger'                   
+
 # Background processing
 gem "sidekiq", "~> 7.0"
 gem "sidekiq-failures", "~> 1.0"

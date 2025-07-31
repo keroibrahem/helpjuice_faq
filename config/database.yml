@@ -15,15 +15,29 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: localhost
-  username: postgres
-  password: root
-  pool: 5 
-
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
 
 development:
   <<: *default
   database: helpjuice_faq_development
+  host: localhost
+  username: postgres
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
+
+test:
+  <<: *default
+  database: helpjuice_faq_test
+  host: localhost
+  username: postgres
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
+
+production:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
+  sslmode: require
+  sslrootcert: <%= ENV['PGSSLROOTCERT'] || './config/production-ca-certificate.crt' %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { ENV['DB_POOL'] || 10 } %>
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
