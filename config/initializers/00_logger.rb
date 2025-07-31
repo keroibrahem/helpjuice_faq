@@ -1,10 +1,10 @@
-# config/initializers/00_logger.rb
-require 'logger'
-
-module ActiveSupport
-  module LoggerThreadSafeLevel
-    Logger = ::Logger
+unless defined?(ActiveSupport::LoggerThreadSafeLevel::Logger)
+    require 'logger'
+    module ActiveSupport
+      module LoggerThreadSafeLevel
+        Logger = ::Logger
+      end
+    end
   end
-end
-
-Rails.logger = ActiveSupport::TaggedLogging.new(ActiveSupport::Logger.new(STDOUT))
+# تهيئة الـ Logger
+Rails.logger = ActiveSupport::TaggedLogging.new(ActiveSupport::Logger.new($stdout))

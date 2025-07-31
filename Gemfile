@@ -4,7 +4,8 @@ source "https://rubygems.org"
 gem 'rails', '~> 7.0.8'
 gem "propshaft"
 
-# Logger fixes
+# Critical dependencies
+gem 'bigdecimal', '~> 3.1.4', require: false
 gem 'logger', '~> 1.5'
 gem 'activesupport', '7.0.8.7'
 

@@ -1,12 +1,13 @@
 ENV["BUNDLE_GEMFILE"] ||= File.expand_path("../Gemfile", __dir__)
 
-# Early logger initialization
-unless defined?(ActiveSupport::LoggerThreadSafeLevel::Logger)
-  require 'logger'
-  module ActiveSupport
-    module LoggerThreadSafeLevel
-      Logger = ::Logger
-    end
+# Early requires
+require 'mutex_m'
+require 'logger'
+
+# Logger setup
+module ActiveSupport
+  module LoggerThreadSafeLevel
+    include Logger::Severity
   end
 end
 
