@@ -4,6 +4,10 @@ source "https://rubygems.org"
 gem 'rails', '~> 7.0.8'
 gem "propshaft"
 
+# Logger fixes
+gem 'logger', '~> 1.5'
+gem 'activesupport', '7.0.8.7'
+
 # Database
 gem "pg", "~> 1.1", group: :production
 
@@ -12,9 +16,6 @@ gem "puma", "~> 6.0"
 gem "redis", "~> 5.0"
 gem "hiredis", "~> 0.6"
 gem "redis-rails"
-
-gem 'activesupport', '7.0.8.7'  
-gem 'logger'                   
 
 # Background processing
 gem "sidekiq", "~> 7.0"
@@ -37,11 +38,11 @@ gem "jbuilder"
 gem "kamal", require: false
 gem "rails_12factor", group: :production
 
-# Testing - NOTE: Using rspec-rails 6.x for Rails 7.0 compatibility
+# Testing
 group :test do
   gem "capybara"
   gem "selenium-webdriver"
-  gem "rspec-rails", "~> 6.1.0" # Changed from 8.0 to be compatible with Rails 7.0
+  gem "rspec-rails", "~> 6.1.0"
 end
 
 # Development
