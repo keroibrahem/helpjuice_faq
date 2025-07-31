@@ -73,7 +73,7 @@ RUN chmod +x bin/* && \
     sed -i 's/ruby\.exe$/ruby/' bin/*
 
 # تجميع الأصول مع fallback لو فشل أول مرة
-RUN SECRET_KEY_BASE_DUMMY=1 bundle exec rails assets:precompile || \
+RUN bundle exec rails assets:precompile || \
     (bundle exec rails assets:clobber && \
      bundle exec rails runner "require 'mutex_m'; require 'bigdecimal';" && \
      SECRET_KEY_BASE_DUMMY=1 bundle exec rails assets:precompile)
