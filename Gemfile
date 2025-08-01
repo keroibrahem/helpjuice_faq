@@ -44,7 +44,7 @@ gem "rails_12factor", group: :production
 group :test do
   gem "capybara"
   gem "selenium-webdriver"
-  gem "rspec-rails", "~> 6.1.0"
+  gem "rspec-rails", "~> 7.1.1"
 end
 
 # Development
