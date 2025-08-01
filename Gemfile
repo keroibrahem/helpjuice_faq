@@ -3,7 +3,6 @@ source "https://rubygems.org"
 # Core Rails
 gem 'rails', '~> 7.0.8'
 gem "propshaft"
-gem 'upstash-redis', git: 'https://github.com/upstash/upstash-redis-rb', branch: 'main'
 
 
 # Critical dependencies
