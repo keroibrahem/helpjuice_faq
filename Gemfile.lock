@@ -71,7 +71,7 @@ GEM
     ast (2.4.3)
     base64 (0.3.0)
     bcrypt_pbkdf (1.1.1)
-    bigdecimal (3.1.9)
+    bigdecimal (3.2.2)
     bindex (0.8.1)
     bootsnap (1.18.6)
       msgpack (~> 1.2)
@@ -359,7 +359,7 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport (= 7.0.8.7)
-  bigdecimal (~> 3.1.4)
+  bigdecimal (~> 3.2.2)
   bootsnap (~> 1.16)
   brakeman
   capybara
