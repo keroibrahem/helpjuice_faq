@@ -14,7 +14,7 @@ gem 'activesupport', '7.0.8.7'
 gem "pg", "~> 1.1", group: :production
 
 # Server
-gem "puma", "~> 6.0"
+gem "puma", "~> 6.6"
 gem "redis", "~> 5.0"
 gem "hiredis", "~> 0.6"
 gem "redis-rails"
