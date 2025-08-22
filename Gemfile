@@ -21,7 +21,7 @@ gem "redis-rails"
 
 # Background processing
 gem "sidekiq", "~> 7.0"
-gem "sidekiq-failures", "~> 1.0"
+gem "sidekiq-failures", "~> 1.1"
 
 # Caching
 gem "solid_cache"
