@@ -11,7 +11,7 @@ gem 'logger', '~> 1.5'
 gem 'activesupport', '7.0.8.7'
 
 # Database
-gem "pg", "~> 1.1", group: :production
+gem "pg", "~> 1.6", group: :production
 
 # Server
 gem "puma", "~> 6.0"
