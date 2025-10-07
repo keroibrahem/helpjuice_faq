@@ -6,7 +6,7 @@ gem "propshaft"
 
 
 # Critical dependencies
-gem 'bigdecimal', '~> 3.1.4', require: false
+gem 'bigdecimal', '~> 3.3.0', require: false
 gem 'logger', '~> 1.5'
 gem 'activesupport', '7.0.8.7'
 
